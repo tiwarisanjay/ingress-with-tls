@@ -30,8 +30,9 @@ openssl req -x509 -newkey rsa:4096 -sha256 -nodes -keyout tls.key -out tls.crt  
 - Create a kubernates secret using certs 
 ```
 kubectl create secret tls demo-tls --key=tls.key --cert=tls.crt
-``
+```
 - Then create an ingress resource. The following example uses an host that maps to localhost:
+
 ```
 kubectl apply -f ingress.yaml
 ```
